@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Table
@@ -17,7 +18,8 @@ public class course {
 	private String courseName;
 @Column
 	private int studentId;
-	
+	@ManyToOne
+	kodnestStudent student;
 	public course() {
 		// Default Constructor 
 	}

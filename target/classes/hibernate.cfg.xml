@@ -2,14 +2,15 @@
 <hibernate-configuration>
 <session-factory>
 	<property name = "hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-	<property name = "hibernate.connection.url">jdbc:mysql://localhost:3306/febhibernate</property>
+	<property name = "hibernate.connection.url">jdbc:mysql://localhost:3306/hibernate</property>
 	<property name = "hibernate.connection.username">root</property>
 	<property name = "hibernate.connection.password">Shivanand1011</property>
 
     <property name ="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name ="hibernate.show_sql">true</property>
 	<property name ="hibernate.format_sql"></property>
-	
-    <mapping class ="com.shivanand.updateHibernate.Employee"/>
+
+   	<mapping class = "com.shivanand.oneToMany.kodnestStudent"/>
+   	<mapping class ="com.shivanand.oneToMany.course"/>
 </session-factory>
 </hibernate-configuration>
