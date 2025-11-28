@@ -1,6 +1,7 @@
 package com.shivanand.OneToManyCourse;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -9,12 +10,15 @@ import org.hibernate.cfg.Configuration;
 
 public class App {
     public static void main(String[] args) {
-    	Course course1 = new Course("Java");
-    	Course course2 = new Course("HTML");
-    	Course course3 = new Course("CSS");
-    	Course course4 = new Course("MySQL");
+    	Scanner scan = new Scanner(System.in);
+    	System.out.println("Choice any 4 Courses");
+    	Course course1 = new Course(scan.next());
+    	Course course2 = new Course(scan.next());
+    	Course course3 = new Course(scan.next());
+    	Course course4 = new Course(scan.next());
     	
-    	kodStudent student1 = new kodStudent("omkar", "omkar@gmail.com",819710);
+    	System.out.println("Enete name, Email, Phone");
+    	kodStudent student1 = new kodStudent(scan.next(), scan.next(),scan.nextInt());
     	
     	ArrayList<Course> al = new ArrayList<Course>();
     	al.add(course1);
